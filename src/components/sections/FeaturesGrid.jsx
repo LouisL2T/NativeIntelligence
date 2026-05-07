@@ -32,9 +32,9 @@ export function FeaturesGrid() {
       {/* Section Header */}
       <div className="flex flex-col items-center text-center mb-16 md:mb-24">
         <div className="liquid-glass rounded-full px-4 py-1.5 mb-6">
-          <span className="text-black text-xs font-medium font-body uppercase tracking-wider">Why Us</span>
+          <span className="text-[#1e294d] text-xs font-medium font-body uppercase tracking-wider">Why Us</span>
         </div>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-black max-w-2xl">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-[#1e294d] max-w-2xl">
           The difference is everything.
         </h2>
       </div>
@@ -52,22 +52,22 @@ export function FeaturesGrid() {
           >
             <BorderGlow
               edgeSensitivity={30}
-              glowColor="0 0 50"
+              glowColor="33 57 121"
               backgroundColor="#ffffff"
               borderRadius={28}
               glowRadius={30}
               glowIntensity={0.3}
               coneSpread={25}
               animated={true}
-              colors={['#000000', '#333333', '#888888']}
-              className="flex flex-col gap-6 w-full h-full p-8 shadow-sm border-black/5"
+              colors={['#1e294d', '#213979', '#4a6bb5']}
+              className="flex flex-col gap-6 w-full h-full p-8 shadow-sm border-[#1e294d]/5"
             >
               <div className="liquid-glass-strong rounded-full w-12 h-12 flex items-center justify-center shrink-0">
-                <feature.icon className="w-5 h-5 text-black" />
+                <feature.icon className="w-5 h-5 text-[#213979]" />
               </div>
               <div>
-                <h3 className="text-xl font-heading italic text-black mb-3">{feature.title}</h3>
-                <p className="text-black/60 font-body font-light text-sm leading-relaxed">
+                <h3 className="text-xl font-heading italic text-[#1e294d] mb-3">{feature.title}</h3>
+                <p className="text-[#1e294d]/60 font-body font-light text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

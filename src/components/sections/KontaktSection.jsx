@@ -34,12 +34,12 @@ export function KontaktSection() {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-24">
           <div className="liquid-glass rounded-full px-4 py-1.5 mb-6">
-            <span className="text-black text-xs font-medium font-body uppercase tracking-wider">Kontakt</span>
+            <span className="text-[#1e294d] text-xs font-medium font-body uppercase tracking-wider">Kontakt</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-black max-w-3xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-[#1e294d] max-w-3xl">
             Lassen Sie uns sprechen.
           </h2>
-          <p className="mt-6 text-black/60 font-body font-light text-lg max-w-2xl leading-relaxed">
+          <p className="mt-6 text-[#1e294d]/60 font-body font-light text-lg max-w-2xl leading-relaxed">
             Kein Verkaufsgespräch. Kein Druck. Nur ein ehrliches Gespräch darüber, was wir für Sie tun können.
           </p>
         </div>
@@ -57,37 +57,37 @@ export function KontaktSection() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 {/* Name */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-body font-medium text-black/50 uppercase tracking-wider">Ihr Name</label>
+                  <label className="text-xs font-body font-medium text-[#1e294d]/50 uppercase tracking-wider">Ihr Name</label>
                   <input
                     type="text"
                     required
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     placeholder="Max Mustermann"
-                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-black placeholder:text-black/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base"
+                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-[#1e294d] placeholder:text-[#1e294d]/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-body font-medium text-black/50 uppercase tracking-wider">E-Mail-Adresse</label>
+                  <label className="text-xs font-body font-medium text-[#1e294d]/50 uppercase tracking-wider">E-Mail-Adresse</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
                     placeholder="max@unternehmen.de"
-                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-black placeholder:text-black/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base"
+                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-[#1e294d] placeholder:text-[#1e294d]/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base"
                   />
                 </div>
 
                 {/* Service */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-body font-medium text-black/50 uppercase tracking-wider">Interesse an</label>
+                  <label className="text-xs font-body font-medium text-[#1e294d]/50 uppercase tracking-wider">Interesse an</label>
                   <select
                     value={form.service}
                     onChange={e => setForm({ ...form, service: e.target.value })}
-                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-black outline-none focus:ring-2 focus:ring-black/10 transition-all text-base bg-transparent appearance-none cursor-pointer"
+                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-[#1e294d] outline-none focus:ring-2 focus:ring-black/10 transition-all text-base bg-transparent appearance-none cursor-pointer"
                   >
                     <option value="">Bitte wählen...</option>
                     <option value="websites">Website Entwicklung & Design</option>
@@ -100,14 +100,14 @@ export function KontaktSection() {
 
                 {/* Message */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-body font-medium text-black/50 uppercase tracking-wider">Ihre Nachricht</label>
+                  <label className="text-xs font-body font-medium text-[#1e294d]/50 uppercase tracking-wider">Ihre Nachricht</label>
                   <textarea
                     required
                     rows={5}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
                     placeholder="Erzählen Sie uns von Ihrem Projekt, Ihren Zielen und Ihrem Zeitplan..."
-                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-black placeholder:text-black/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base resize-none"
+                    className="w-full px-5 py-4 rounded-2xl liquid-glass font-body text-[#1e294d] placeholder:text-[#1e294d]/30 outline-none focus:ring-2 focus:ring-black/10 transition-all text-base resize-none"
                   />
                 </div>
 
@@ -116,7 +116,7 @@ export function KontaktSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-black text-white rounded-full py-4 px-8 font-body font-semibold text-base flex items-center justify-center gap-2 hover:bg-black/80 transition-colors mt-2"
+                  className="w-full bg-[#213979] text-white rounded-full py-4 px-8 font-body font-semibold text-base flex items-center justify-center gap-2 hover:bg-black/80 transition-colors mt-2"
                 >
                   <Send className="w-4 h-4" />
                   Nachricht senden
@@ -129,11 +129,11 @@ export function KontaktSection() {
                 className="h-full flex flex-col items-center justify-center text-center py-20 liquid-glass rounded-3xl gap-6"
               >
                 <div className="w-16 h-16 liquid-glass-strong rounded-full flex items-center justify-center">
-                  <Send className="w-6 h-6 text-black" />
+                  <Send className="w-6 h-6 text-[#1e294d]" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-heading italic text-black mb-2">Nachricht gesendet!</h3>
-                  <p className="text-black/60 font-body font-light">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                  <h3 className="text-2xl font-heading italic text-[#1e294d] mb-2">Nachricht gesendet!</h3>
+                  <p className="text-[#1e294d]/60 font-body font-light">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
                 </div>
               </motion.div>
             )}
@@ -156,21 +156,21 @@ export function KontaktSection() {
               >
                 <div className="flex items-center justify-between">
                   <div className="liquid-glass-strong rounded-full w-10 h-10 flex items-center justify-center">
-                    <opt.icon className="w-4 h-4 text-black" />
+                    <opt.icon className="w-4 h-4 text-[#1e294d]" />
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-black/20 group-hover:text-black transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 text-[#1e294d]/20 group-hover:text-[#1e294d] transition-colors" />
                 </div>
                 <div>
-                  <div className="text-xs font-body font-medium text-black/40 uppercase tracking-wider mb-1">{opt.title}</div>
-                  <div className="font-heading italic text-lg text-black">{opt.value}</div>
+                  <div className="text-xs font-body font-medium text-[#1e294d]/40 uppercase tracking-wider mb-1">{opt.title}</div>
+                  <div className="font-heading italic text-lg text-[#1e294d]">{opt.value}</div>
                 </div>
-                <p className="text-black/50 font-body text-sm">{opt.desc}</p>
+                <p className="text-[#1e294d]/50 font-body text-sm">{opt.desc}</p>
               </a>
             ))}
 
             {/* Promise */}
             <div className="p-7 liquid-glass rounded-2xl flex flex-col gap-4">
-              <h4 className="font-heading italic text-xl text-black">Unser Versprechen</h4>
+              <h4 className="font-heading italic text-xl text-[#1e294d]">Unser Versprechen</h4>
               <div className="flex flex-col gap-3">
                 {[
                   "Antwort innerhalb von 24 Stunden",
@@ -179,8 +179,8 @@ export function KontaktSection() {
                   "Konkrete Einschätzung Ihres Projekts",
                 ].map((promise, i) => (
                   <div key={i} className="flex items-center gap-2.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-black shrink-0" />
-                    <span className="text-black/60 font-body text-sm">{promise}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#213979] shrink-0" />
+                    <span className="text-[#1e294d]/60 font-body text-sm">{promise}</span>
                   </div>
                 ))}
               </div>

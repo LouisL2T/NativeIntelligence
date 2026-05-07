@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const menuItems = [
   { label: "Start", href: "/" },
-  { label: "Lösungen & Szenarien", href: "/#loesungen" },
+  { label: "Lösungen & Szenarien", href: "/loesungen" },
   { 
     label: "Services & KI", 
     href: "#",
@@ -16,9 +16,9 @@ const menuItems = [
       { label: "Automationen", href: "/services/automationen" },
     ]
   },
-  { label: "Data Privacy", href: "/#privacy" },
-  { label: "Zukunftsthesen", href: "/#zukunft" },
-  { label: "Über uns", href: "/#about" },
+  { label: "Data Privacy", href: "/privacy" },
+  { label: "Zukunftsthesen", href: "/zukunft" },
+  { label: "Über uns", href: "/about" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
@@ -42,7 +42,7 @@ export function Navbar() {
         {/* Burger Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-white/70 backdrop-blur-md border border-black/5 shadow-sm rounded-full px-5 py-2.5 flex items-center gap-2 hover:bg-white/90 transition-colors text-black font-body font-medium"
+          className="bg-white/70 backdrop-blur-md border border-[#1e294d]/10 shadow-sm rounded-full px-5 py-2.5 flex items-center gap-2 hover:bg-white/90 transition-colors text-[#1e294d] font-body font-medium"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           Menu
@@ -56,7 +56,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full right-0 mt-3 w-72 bg-white/90 backdrop-blur-xl border border-black/10 shadow-2xl rounded-3xl p-4 flex flex-col gap-1 overflow-hidden"
+              className="absolute top-full right-0 mt-3 w-72 bg-white/90 backdrop-blur-xl border border-[#1e294d]/10 shadow-2xl rounded-3xl p-4 flex flex-col gap-1 overflow-hidden"
             >
               {menuItems.map((item, idx) => (
                 <div key={idx} className="flex flex-col">
@@ -64,7 +64,7 @@ export function Navbar() {
                     <>
                       <button 
                         onClick={() => setOpenSub(openSub === item.label ? null : item.label)}
-                        className="w-full text-left px-4 py-3 rounded-xl hover:bg-black/5 transition-colors flex items-center justify-between text-black font-heading italic text-xl"
+                        className="w-full text-left px-4 py-3 rounded-xl hover:bg-[#1e294d]/5 transition-colors flex items-center justify-between text-[#1e294d] font-heading italic text-xl"
                       >
                         {item.label}
                         <ChevronDown className={`w-4 h-4 transition-transform ${openSub === item.label ? 'rotate-180' : ''}`} />
@@ -82,7 +82,7 @@ export function Navbar() {
                                 key={sIdx}
                                 to={sub.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-black/70 hover:text-black font-body text-sm font-medium transition-colors"
+                                className="text-[#1e294d]/60 hover:text-[#213979] font-body text-sm font-medium transition-colors"
                               >
                                 {sub.label}
                               </Link>
@@ -95,7 +95,7 @@ export function Navbar() {
                     <Link
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="px-4 py-3 rounded-xl hover:bg-black/5 transition-colors text-black font-heading italic text-xl"
+                      className="px-4 py-3 rounded-xl hover:bg-[#1e294d]/5 transition-colors text-[#1e294d] font-heading italic text-xl"
                     >
                       {item.label}
                     </Link>
